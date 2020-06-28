@@ -1,4 +1,4 @@
-package com.project.nagging;
+package com.project.gerdit;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

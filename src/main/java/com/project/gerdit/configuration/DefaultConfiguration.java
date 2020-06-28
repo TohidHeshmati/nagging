@@ -1,4 +1,4 @@
-package com.project.nagging.configuration;
+package com.project.gerdit.configuration;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
