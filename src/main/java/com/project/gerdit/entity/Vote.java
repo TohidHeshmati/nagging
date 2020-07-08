@@ -1,28 +1,28 @@
 package com.project.gerdit.entity;
 
 import lombok.*;
+import org.springframework.data.domain.Auditable;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
-import java.util.Collection;
+import javax.persistence.ManyToOne;
 
 @Entity
+@NoArgsConstructor
 @RequiredArgsConstructor
 @Getter
 @Setter
-@ToString
-@NoArgsConstructor
-public class Role {
+public class Vote extends Auditable {
 
     @Id
     @GeneratedValue
     private Long id;
 
     @NonNull
-    private String name;
+    private short direction;
 
-    @ManyToMany( mappedBy = "roles")
-    private Collection<User> users;
+    @NonNull
+    @ManyToOne
+    private Link link;
 }
